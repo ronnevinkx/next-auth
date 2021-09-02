@@ -161,14 +161,13 @@ I've chosen SendGrid as email service and have set up the environment variable `
 
 ## Deployment Checklist
 
--   [x] Styling rendered on server
--   [ ] Welcome and Forgot Password mails sent out: no
--   [ ] Facebook sign in
--   [ ] Google sign in
--   [ ] Twitter sign in
--   [ ] GitHub sign in
--   [ ] Credentials sign in
--   [ ] Credentials register
+-   [x] styled-components rendered on server
+-   [x] Welcome and Forgot Password mails sent out and received
+-   [x] Facebook sign in and register
+-   [x] Google sign in and register
+-   [x] Twitter sign in and register
+-   [x] GitHub sign in and register
+-   [x] Credentials sign in and register
 
 ## Notes
 

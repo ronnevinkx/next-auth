@@ -2,6 +2,8 @@
 	"name": "next-auth",
 	"version": "0.1.0",
 	"private": true,
+	"author": "Ronne Vinkx",
+	"description": "Custom authentication system with NextAuth.js.",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
