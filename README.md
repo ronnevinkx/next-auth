@@ -2,8 +2,6 @@
 
 Custom authentication system with NextAuth.js.
 
-Check out [live version](https://next-auth-delta.herokuapp.com).
-
 **Good to know**
 
 -   When signing in with a social provider without having an account, you automatically get an account.
