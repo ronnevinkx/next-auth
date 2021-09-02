@@ -1,0 +1,68 @@
+.text-sm {
+	font-size: 12px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.my-30 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.mb-10 {
+	margin-bottom: 10px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mb-40 {
+	margin-bottom: 40px;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #cccccc;
+}
+
+.text-light {
+	color: #ffffff;
+}
+
+.text-warning {
+	color: #ec1044;
+}
+
+.hr {
+	height: 1px;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-top: 1px solid #51537c;
+
+	&__text {
+		display: inline-block;
+		font-size: 12px;
+		color: #51537c;
+		padding: 0 12px;
+		transform: translateY(-75%);
+		background: #202244;
+	}
+}
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover,
+// input:-webkit-autofill:focus,
+// textarea:-webkit-autofill,
+// textarea:-webkit-autofill:hover,
+// textarea:-webkit-autofill:focus,
+// select:-webkit-autofill,
+// select:-webkit-autofill:hover,
+// select:-webkit-autofill:focus {
+// 	border-color: #41d27a;
+// 	-webkit-text-fill-color: #ffffff;
+// 	// -webkit-box-shadow: 0 0 0px 1000px #41d27a inset; // background color for autofill
+// 	transition: background-color 5000s ease-in-out 0s;
+// }
