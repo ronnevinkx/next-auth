@@ -88,6 +88,8 @@ I've chosen SendGrid as email service and have set up the environment variable `
 ## Deployment Checklist
 
 - [x] Welcome and Forgot Password mails sent out and received
+- [x] Protected API routes
+- [x] Forgot/retrieve password flow
 - [x] Facebook sign in and register
 - [x] Google sign in and register
 - [x] Twitter sign in and register
