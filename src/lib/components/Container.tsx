@@ -13,7 +13,7 @@ export const Container: FC<ContainerProps> = ({
 }) => {
   return (
     <div
-      className={`container mx-auto ${maxWidth} my-0 sm:my-8 p-8 bg-white shadow-md sm:rounded-xl`}
+      className={`container mx-auto ${maxWidth} my-0 sm:my-8 py-8 px-4 sm:px-8 bg-white shadow-md sm:rounded-xl`}
     >
       {children}
     </div>

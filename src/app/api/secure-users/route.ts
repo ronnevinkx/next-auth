@@ -30,7 +30,7 @@ export async function GET() {
     // 401 Unauthorized
     return NextResponse.json(
       {
-        session: null,
+        users: null,
       },
       {
         status: 401,

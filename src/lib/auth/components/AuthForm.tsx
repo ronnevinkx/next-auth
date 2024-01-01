@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { redirect, useSearchParams } from "next/navigation";
 import type { BuiltInProviderType } from "next-auth/providers/index";
 import type { ClientSafeProvider, LiteralUnion } from "next-auth/react";
 import { signIn } from "next-auth/react";
@@ -36,6 +36,18 @@ export const AuthForm: FC<AuthFormProps> = ({
     useState<PasswordInputType>("password");
   const searchParams = useSearchParams();
   const error = searchParams.get("error");
+  const callbackUrl = searchParams.get("callbackUrl");
+
+  if (
+    (callbackUrl &&
+      authType === "signin" &&
+      callbackUrl.indexOf("/register") !== -1) ||
+    (callbackUrl &&
+      authType === "register" &&
+      callbackUrl.indexOf("/signin") !== -1)
+  ) {
+    redirect(`${callbackUrl}${error && `?error=${error}`}`);
+  }
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -43,7 +55,13 @@ export const AuthForm: FC<AuthFormProps> = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    signIn("credentials", { name, email, password });
+    signIn("credentials", {
+      name,
+      email,
+      password,
+      redirect: true,
+      callbackUrl: callbackUrl || undefined,
+    });
   };
 
   const formSettings =

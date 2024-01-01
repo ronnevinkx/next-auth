@@ -18,7 +18,7 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button
       type={type}
-      className={`relative flex items-center justify-center border rounded-lg px-5 py-3 transition-all ${
+      className={`relative flex items-center justify-center border rounded-lg pl-7 sm:pl-3 pr-3 py-3 transition-all ${
         fullWidth && "w-full"
       } ${
         primary

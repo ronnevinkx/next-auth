@@ -62,14 +62,14 @@ export const authOptions: NextAuthOptions = {
             const user = await User.add({ name, email, password });
             return user;
           } catch (error) {
-            throw "/auth/register?error=CredentialsSignin";
+            return null;
           }
         } else {
           try {
             const user = await User.login(email, password);
             return user;
           } catch (error) {
-            throw "/auth/signin?error=CredentialsSignin";
+            return null;
           }
         }
       },

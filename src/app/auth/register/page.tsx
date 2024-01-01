@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Register",
 };
 
-export default async function SignIn() {
+export default async function Register() {
   const session = await getServerSession(authOptions);
 
   if (session) {

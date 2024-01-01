@@ -2,13 +2,12 @@
 
 Custom authentication system with NextAuth.js.
 
-Check out [live version](https://next-auth-delta.vercel.app).
+Check out [live version](https://next-auth-ronnevinkx.vercel.app).
 
 ## Issues
 
 Currently working on these issues:
 
-- `callbackUrl` doesn't work for `secure-page`, user returns to homepage
 - No way of knowing if we should return to register or signin on error, see comments marked with `// TODO`
 
 ## Good to know
