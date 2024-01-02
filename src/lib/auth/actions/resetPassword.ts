@@ -5,6 +5,7 @@ import { z } from "zod";
 
 import { authOptions } from "@/app/api/auth/[...nextauth]/authOptions";
 import { User } from "@/lib/models/User.model";
+import dbConnect from "@/lib/utils/dbConnect";
 
 export async function resetPassword(_: any, formData: FormData) {
   const session = await getServerSession(authOptions);
@@ -15,6 +16,8 @@ export async function resetPassword(_: any, formData: FormData) {
       error: "AlreadySignedIn",
     };
   }
+
+  await dbConnect();
 
   const data = Object.fromEntries(formData.entries());
   const result = z
