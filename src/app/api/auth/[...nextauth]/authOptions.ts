@@ -79,6 +79,7 @@ export const authOptions: NextAuthOptions = {
     signIn: "/auth/signin",
   },
   secret: process.env.NEXTAUTH_SECRET,
+  debug: true,
   callbacks: {
     async signIn({ user, account }) {
       // check incoming oauth or credentials request against database
