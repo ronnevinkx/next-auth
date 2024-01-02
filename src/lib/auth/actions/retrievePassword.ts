@@ -44,7 +44,7 @@ export async function retrievePassword(_: any, formData: FormData) {
       await User.findByIdAndUpdate(user._id, { retrieveToken });
 
       // send email with token
-      const tokenLink = `${process.env.NEXTAUTH_URL}/auth/resetPassword?token=${retrieveToken}`;
+      const tokenLink = `${process.env.NEXT_PUBLIC_BASE_URL}/auth/resetPassword?token=${retrieveToken}`;
 
       const mailData = {
         from: `${COMPANY_FROM_NAME} <${COMPANY_FROM_EMAIL}>`,
