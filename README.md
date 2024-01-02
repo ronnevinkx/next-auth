@@ -14,6 +14,8 @@ Currently working on these issues:
 
 - When signing in with a social provider without having an account, you automatically get an account.
 
+- Be sture to adjust the `User.find` method in `/api/secure-users`
+
 - When signing in with GitHub (possibly fails if there's no public email address), code has no way of knowing where to return (`/auth/signin` or `/auth/register`). See: `authOptions.tsx`.
 
 ## Table of Contents

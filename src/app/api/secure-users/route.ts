@@ -13,7 +13,9 @@ export async function GET() {
     await dbConnect();
 
     const users = await User.find(
-      {},
+      {
+        email: "my@email.com",
+      },
       "name email loginCount lastLoginAt createdAt"
     );
 
