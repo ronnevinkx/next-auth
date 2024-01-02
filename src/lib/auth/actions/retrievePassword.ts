@@ -7,6 +7,7 @@ import { z } from "zod";
 import { authOptions } from "@/app/api/auth/[...nextauth]/authOptions";
 import { COMPANY_FROM_EMAIL, COMPANY_FROM_NAME } from "@/lib/constants";
 import { User } from "@/lib/models/User.model";
+import dbConnect from "@/lib/utils/dbConnect";
 import { sendEmail } from "@/lib/utils/mailer";
 
 export async function retrievePassword(_: any, formData: FormData) {
@@ -18,6 +19,8 @@ export async function retrievePassword(_: any, formData: FormData) {
       error: "AlreadySignedIn",
     };
   }
+
+  await dbConnect();
 
   const data = Object.fromEntries(formData.entries());
   const result = z
