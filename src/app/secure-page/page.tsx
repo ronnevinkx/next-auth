@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 
-import { SignInButton } from "@/lib/auth/components";
+import { SignInButton, SignOutButton } from "@/lib/auth/components";
 import { Container } from "@/lib/components";
 
 import { authOptions } from "../api/auth/[...nextauth]/authOptions";
@@ -23,6 +23,9 @@ export default async function SecurePage() {
     <Container>
       <h1 className="font-bold text-3xl">Secure Page</h1>
       <p>Here is my secured content.</p>
+      <p className="mt-3">
+        <SignOutButton fullWidth={false} />
+      </p>
     </Container>
   );
 }
