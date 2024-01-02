@@ -2,7 +2,7 @@
 
 Custom authentication system with NextAuth.js.
 
-Check out [live version](https://next-auth-ronnevinkx.vercel.app).
+Check out [live version](https://next-auth-delta.vercel.app).
 
 ## Issues
 
