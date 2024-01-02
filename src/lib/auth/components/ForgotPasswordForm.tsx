@@ -26,14 +26,7 @@ export const ForgotPasswordForm: FC = () => {
   return (
     <Container maxWidth="max-w-md">
       <h1 className="font-bold text-3xl mb-7">Forgot Password</h1>
-      {success && (
-        <>
-          <p className="text-green-500">{success}</p>
-          <p>
-            <Link href="/auth/signin">Sign In</Link>
-          </p>
-        </>
-      )}
+      {success && <p className="text-green-500">{success}</p>}
       {!success && (
         <form action={formAction} className="mt-3">
           <div className="mb-4">
