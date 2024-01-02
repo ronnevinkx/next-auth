@@ -51,7 +51,7 @@ export const ResetPasswordForm: FC = () => {
       {!success && (
         <form action={formAction} className="mt-3">
           <div className="mb-4">
-            <label htmlFor="password">New password</label>
+            <label htmlFor="password">New password (at least 5 chars)</label>
             <div className="relative">
               <TogglePasswordVisibility
                 title={
