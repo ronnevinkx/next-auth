@@ -5,6 +5,7 @@ import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import TwitterProvider from "next-auth/providers/twitter";
 
+import { isProd } from "@/lib/constants";
 import { User } from "@/lib/models/User.model";
 import dbConnect from "@/lib/utils/dbConnect";
 
@@ -79,7 +80,7 @@ export const authOptions: NextAuthOptions = {
     signIn: "/auth/signin",
   },
   secret: process.env.NEXTAUTH_SECRET,
-  debug: true,
+  debug: !isProd,
   callbacks: {
     async signIn({ user, account }) {
       // check incoming oauth or credentials request against database
